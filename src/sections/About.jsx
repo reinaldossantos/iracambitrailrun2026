@@ -10,7 +10,7 @@ const tags = [
   "Trail Run 12km",
   "Caminhada 3km",
   "Corrida infantil",
-  "Via Sporttimer",
+  "Via MultSports",
   "Impacto real",
 ];
 
@@ -79,7 +79,7 @@ const About = () => {
                 <span className="font-semibold text-cream">
                   {eventInfo.inscriptionPeriod}
                 </span>
-                , via {eventInfo.registrationPlatform}. Cada inscrição também
+                , pela {eventInfo.registrationPlatform}. Cada inscrição também
                 contribui para o plantio de uma muda de árvore nativa, mantendo
                 o compromisso da Iracambi com o reflorestamento da Mata
                 Atlântica.
@@ -100,8 +100,8 @@ const About = () => {
             </div>
 
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-              <Button variant="primary" href="#impacto">
-                Ver Impacto Ambiental
+              <Button variant="primary" href={eventInfo.registrationUrl}>
+                Inscrever-se agora
                 <ArrowRight size={16} aria-hidden="true" />
               </Button>
 

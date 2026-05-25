@@ -17,13 +17,15 @@ export const eventInfo = {
   distance: "12km",
   environment: "Mata Atlântica",
   type: "Trail Run 12km",
-  inscriptionsOpen: false,
+  inscriptionsOpen: true,
 
   inscriptionPeriod: "22 de maio a 22 de junho de 2026",
   walkingDistance: "3km",
   kidsRace: "Corrida infantil",
   vacancies: "150 participantes",
-  registrationPlatform: "Sporttimer",
+  registrationPlatform: "MultSports Eventos",
+  registrationUrl:
+    "https://www.multsportseventos.com/event-details/2-iracambi-trail-run-rosario-da-limeira-mg",
   kitStatus: "Kit atleta disponível",
 
   eventDate: new Date(2026, 6, 5, 8, 0, 0),
@@ -89,10 +91,10 @@ export const timeline = [
     title: "Inscrições Oficiais",
     subtitle: "22 de maio a 22 de junho",
     description:
-      "As inscrições da 2ª edição acontecem via Sporttimer, com vagas limitadas e modalidades para Trail Run 12km, caminhada ecológica 3km e corrida infantil.",
+      "As inscrições da 2ª edição acontecem pela MultSports Eventos, com vagas limitadas e modalidades para Trail Run 12km, caminhada ecológica 3km e corrida infantil.",
     highlight: false,
     upcoming: true,
-    tag: "Sporttimer",
+    tag: "MultSports",
   },
   {
     year: "2026",
@@ -301,7 +303,7 @@ export const raceInfo = [
   { icon: "route", label: "Caminhada", value: "Ecológica 3km" },
   { icon: "users", label: "Corrida Infantil", value: "Categorias infantis" },
   { icon: "mountain", label: "Vagas", value: "150 participantes" },
-  { icon: "trees", label: "Inscrições", value: "Via Sporttimer" },
+  { icon: "trees", label: "Inscrições", value: "Via MultSports" },
 ];
 
 export const sponsors = {
@@ -329,7 +331,7 @@ export const faqItems = [
   {
     question: "Quando acontecem as inscrições?",
     answer:
-      "As inscrições acontecem de 22 de maio a 22 de junho de 2026, exclusivamente pela Sporttimer, por link divulgado nos canais oficiais da Iracambi.",
+      "As inscrições acontecem de 22 de maio a 22 de junho de 2026, pela MultSports Eventos, por meio do link oficial divulgado pela organização.",
   },
   {
     question: "Qual a distância do percurso?",
@@ -358,7 +360,7 @@ export const faqItems = [
   {
     question: "Como chegar à ONG Iracambi?",
     answer:
-      "A ONG Iracambi está localizada em Rosário da Limeira, MG. O regulamento prevê ônibus gratuitos saindo de Muriaé e Rosário da Limeira no dia do evento.",
+      "A ONG Iracambi está localizada em Rosário da Limeira, MG. O evento contará com ônibus gratuito saindo de Muriaé no dia do evento.",
   },
   {
     question: "O evento tem compromisso ambiental?",

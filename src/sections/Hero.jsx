@@ -29,7 +29,7 @@ const heroInfo = [
   {
     icon: Clock,
     label: "Inscrições",
-    value: "22/05 a 22/06 · Via Sporttimer",
+    value: `22/05 a 22/06 · Via ${eventInfo.registrationPlatform}`,
   },
 ];
 
@@ -170,7 +170,7 @@ const Hero = () => {
               <Clock size={13} className="text-trail-gold" aria-hidden="true" />
 
               <span className="font-mono text-[10px] uppercase tracking-[0.24em] text-trail-gold sm:text-[11px]">
-                Inscrições 22/05 a 22/06
+                Inscrições abertas
               </span>
 
               <span
@@ -216,12 +216,12 @@ const Hero = () => {
 
             {/* CTA buttons */}
             <div className="hero-animate flex w-full flex-col gap-4 sm:w-auto sm:flex-row">
-              <Button variant="primary" href="#informacoes">
-                Ver Informações
+              <Button variant="primary" href={eventInfo.registrationUrl}>
+                Inscrever-se agora
               </Button>
 
-              <Button variant="outline" href="#galeria">
-                Ver Fotos da 1ª Edição
+              <Button variant="outline" href="#informacoes">
+                Ver Informações
               </Button>
             </div>
 

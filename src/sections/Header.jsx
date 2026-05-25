@@ -110,11 +110,11 @@ const Header = () => {
         <div className="hidden lg:block">
           <Button
             variant="outline"
-            href="#inscricao"
+            href={eventInfo.registrationUrl}
             className="px-6 py-3 text-xs"
-            aria-label={`Inscrições de ${eventInfo.inscriptionPeriod}, via ${eventInfo.registrationPlatform}`}
+            aria-label={`Inscrição oficial pela ${eventInfo.registrationPlatform}`}
           >
-            Inscrições 22/05 a 22/06
+            Inscrever-se
           </Button>
         </div>
 
@@ -179,11 +179,11 @@ const Header = () => {
 
                 <Button
                   variant="outline"
-                  href="#inscricao"
+                  href={eventInfo.registrationUrl}
                   className="mt-4 justify-center text-center text-xs"
                   onClick={() => setMenuOpen(false)}
                 >
-                  Ver detalhes
+                  Inscrever-se
                 </Button>
               </div>
             </nav>

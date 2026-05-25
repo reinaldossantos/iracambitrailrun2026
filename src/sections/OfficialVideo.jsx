@@ -1,6 +1,8 @@
 import React from "react";
-import { CalendarDays, PlayCircle } from "lucide-react";
+import { ArrowUpRight, CalendarDays, PlayCircle } from "lucide-react";
 import { motion } from "motion/react";
+
+import { eventInfo } from "../data/eventData";
 
 const OFFICIAL_VIDEO_SRC = "/videos/video-oficial-2026.mp4";
 
@@ -102,13 +104,21 @@ const OfficialVideo = () => {
                 </p>
               </div>
 
-              <div className="inline-flex w-fit items-center gap-2 rounded-full border border-trail-gold/25 bg-trail-gold/10 px-4 py-2 text-trail-gold">
+              <a
+                href={eventInfo.registrationUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex w-fit items-center gap-2 rounded-full border border-trail-gold/25 bg-trail-gold/10 px-4 py-2 text-trail-gold transition-all duration-300 hover:-translate-y-0.5 hover:border-trail-gold hover:bg-trail-gold hover:text-forest-950"
+                aria-label="Abrir inscrição oficial do Iracambi Trail Run"
+              >
                 <CalendarDays size={15} strokeWidth={2.4} aria-hidden="true" />
 
                 <span className="font-mono text-[10px] uppercase tracking-[0.2em]">
-                  Inscrições 22/05 a 22/06
+                  Inscrever-se
                 </span>
-              </div>
+
+                <ArrowUpRight size={13} strokeWidth={2.4} aria-hidden="true" />
+              </a>
             </div>
           </div>
         </motion.div>

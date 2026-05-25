@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { CalendarDays, Clock3 } from "lucide-react";
+import { ArrowUpRight, CalendarDays, Clock3 } from "lucide-react";
 import { motion } from "motion/react";
 
 import { eventInfo } from "../data/eventData";
@@ -168,20 +168,33 @@ const Countdown = () => {
           ))}
         </div>
 
-        <div className="mx-auto mt-10 flex w-fit max-w-full flex-col items-center gap-3 rounded-3xl border border-white/10 bg-white/[0.045] px-5 py-4 text-cream-muted sm:flex-row sm:rounded-full">
-          <CalendarDays
-            size={15}
-            className="text-trail-gold"
-            aria-hidden="true"
-          />
+        <div className="mx-auto mt-10 flex w-fit max-w-full flex-col items-center gap-4 rounded-3xl border border-white/10 bg-white/[0.045] px-5 py-4 text-cream-muted sm:flex-row sm:rounded-full">
+          <div className="flex items-center gap-2">
+            <CalendarDays
+              size={15}
+              className="text-trail-gold"
+              aria-hidden="true"
+            />
 
-          <p className="font-body text-center text-xs leading-relaxed sm:text-sm">
-            Data oficial: 05 de julho de 2026 · Inscrições de{" "}
-            <span className="font-semibold text-trail-gold">
-              {eventInfo.inscriptionPeriod}
-            </span>{" "}
-            via {eventInfo.registrationPlatform}.
-          </p>
+            <p className="font-body text-center text-xs leading-relaxed sm:text-sm">
+              Data oficial: 05 de julho de 2026 · Inscrições de{" "}
+              <span className="font-semibold text-trail-gold">
+                {eventInfo.inscriptionPeriod}
+              </span>{" "}
+              pela {eventInfo.registrationPlatform}.
+            </p>
+          </div>
+
+          <a
+            href={eventInfo.registrationUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full border border-trail-gold/25 bg-trail-gold/10 px-4 py-2 font-mono text-[10px] uppercase tracking-[0.2em] text-trail-gold transition-all duration-300 hover:-translate-y-0.5 hover:border-trail-gold hover:bg-trail-gold hover:text-forest-950"
+            aria-label="Abrir inscrição oficial do Iracambi Trail Run"
+          >
+            Inscrever-se
+            <ArrowUpRight size={13} strokeWidth={2.4} aria-hidden="true" />
+          </a>
         </div>
       </motion.div>
 

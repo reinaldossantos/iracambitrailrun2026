@@ -242,7 +242,7 @@ const RaceInfo = () => {
                   precisa <em className="not-italic gradient-text">saber</em>
                 </>
               }
-              subtitle="A 2ª edição reúne Trail Run 12km, caminhada ecológica 3km e corrida infantil, com inscrições via Sporttimer e vagas limitadas."
+              subtitle={`A 2ª edição reúne Trail Run 12km, caminhada ecológica 3km e corrida infantil, com inscrições pela ${eventInfo.registrationPlatform} e vagas limitadas.`}
             />
 
             <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">

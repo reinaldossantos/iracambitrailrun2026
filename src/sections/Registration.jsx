@@ -15,7 +15,7 @@ import { motion } from "motion/react";
 
 import { eventInfo } from "../data/eventData";
 
-const REGISTRATION_URL = "https://www.instagram.com/ong_iracambi/";
+const REGISTRATION_URL = eventInfo.registrationUrl;
 
 const getSafeLinkProps = (url) => {
   const isExternal = /^https?:\/\//i.test(url);
@@ -136,8 +136,8 @@ const Registration = () => {
               <span className="font-semibold text-trail-gold">
                 {eventInfo.inscriptionPeriod}
               </span>
-              , exclusivamente via {eventInfo.registrationPlatform}, com vagas
-              limitadas para a 2ª edição do Iracambi Trail Run.
+              , pela {eventInfo.registrationPlatform}, com vagas limitadas para
+              a 2ª edição do Iracambi Trail Run.
             </p>
 
             <div className="mb-10 grid max-w-2xl grid-cols-1 gap-3 sm:grid-cols-2">
@@ -167,15 +167,15 @@ const Registration = () => {
               {...registrationProps}
               whileHover={{ y: -3 }}
               whileTap={{ scale: 0.98 }}
-              aria-label="Acompanhar inscrição nos canais oficiais da Iracambi"
+              aria-label="Abrir inscrição oficial do Iracambi Trail Run"
             >
-              Acompanhar inscrição
+              Inscrever-se agora
               <ArrowUpRight size={16} strokeWidth={2.4} aria-hidden="true" />
             </motion.a>
 
             <p className="mt-4 max-w-md font-body text-xs leading-relaxed text-cream-subtle">
-              O link oficial da {eventInfo.registrationPlatform} será divulgado
-              nos canais oficiais da Iracambi.
+              Você será redirecionado para o ambiente oficial de inscrição da{" "}
+              {eventInfo.registrationPlatform}.
             </p>
           </motion.div>
 
